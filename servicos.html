@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Horários</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="PG.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="logo-site">
+    <nav>
+    <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="PGsobre.html">Sobre</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+    </ul>
+    <ul>
+        <li class="hideOnMobile"><a href="index.html">Início</a></li>
+        <li class="hideOnMobile"><a href="PGsobre.html">Sobre</a></li>
+        <li class="hideOnMobile"><a href="servicos.html">Serviços</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+    </nav>
+</header>
+<main>
+    <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-body">
+                <h2>Agende seu Horário</h2>
+                <form id="appointmentForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome:</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Digite seu nome" required>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Data:</label>
+                        <input type="date" id="date" name="date" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="time" class="form-label">Horário:</label>
+                        <input type="time" id="time" name="time" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                      <h1>Selecione um serviço</h1>
+                      <div class="grid-container">
+                      <div class="servicos">
+                        <div class="form-check">
+                          <input type="checkbox" id="service1" name="services" class="form-check-input" value="Corte">
+                          <label for="service1" class="form-check-label">
+                            <img src="Logos_s.png" alt="Corte de cabelo">
+                            <p>Corte de cabelo</p>
+                          </label>
+                        </div>
+                      
+                        <div class="form-check">
+                          <input type="checkbox" id="service2" name="services" class="form-check-input" value="Dia do Noivo">
+                          <label for="service2" class="form-check-label">
+                            <img src="Logos_casamento.png" alt="Dia do Noivo">
+                            <p>Dia do Noivo</p>
+                          </label>
+                        </div>
+                      
+                        <div class="form-check">
+                          <input type="checkbox" id="service3" name="services" class="form-check-input" value="Química Capilar">
+                          <label for="service3" class="form-check-label">
+                            <img src="Logos_quimica.png" alt="Química capilar">
+                            <p>Química Capilar</p>
+                          </label>
+                        </div>
+                      
+                        <div class="form-check">
+                          <input type="checkbox" id="service4" name="services" class="form-check-input" value="Hidratação">
+                          <label for="service4" class="form-check-label">
+                            <img src="Logos_boniteza.png" alt="Hidratação">
+                            <p>Hidratação</p>
+                          </label>
+                        </div>
+                      
+                        <div class="form-check">
+                          <input type="checkbox" id="service5" name="services" class="form-check-input" value="Massagem">
+                          <label for="service5" class="form-check-label">
+                              <img src="Logos_Massagem.png" alt="Massagem">
+                              <p>Massagem</p>
+                            </label>
+                      </div>
+                    </div>
+                      </div>
+                      
+                        </div>
+                    <button type="submit" class="btn btn-submit w-100 mt-3">Agendar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Lista de Agendamentos</h2>
+        <div id="appointmentsList"></div> 
+    </div>
+  </main>
+    <footer>
+      <div class="barra-informacoes">
+          <div class="info">
+              <h3>Endereço</h3>
+              <p>Avenida Cinquentenário, 125 - Itabuna</p>
+          </div>
+          <div class="info">
+              <h3>Funcionamento</h3>
+              <p>Segunda a Sábado: 08h - 20h</p>
+              <p>Domingo: 10h - 16h</p>
+          </div>
+          <div class="info">
+              <h3>Contato</h3>
+              <p>Telefone: (XX) XXXX-XXXX</p>
+              <p>Email: contato@barbearia.com</p>
+          </div>
+      </div>
+      <div class="trilho" id="trilho"></div>
+  </footer>
+
+    <script src="PG.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

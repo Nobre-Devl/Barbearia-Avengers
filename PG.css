@@ -1,0 +1,501 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(barber222.PNG);
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    height: 100%;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 0.1rem;
+}
+
+header img {
+    width: 50%;
+    max-width: 6.7rem;
+    height: auto;
+    object-fit: contain;
+}
+
+/* NAO MEXE NO MEU MENU- Começo do Menu */
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 3.1rem;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 1.8rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.2rem;
+    background-color: rgb(241, 209, 24);
+    transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 15.6rem;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.522);
+    backdrop-filter: blur(10px);
+    box-shadow: -0.6rem 0 0.6rem rgba(83, 83, 83, 0.544);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.text-center{
+    color:rgb(224, 224, 224);
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+    position: relative;
+    padding: 1.2rem;
+    text-decoration: none;
+    color: white;
+}
+
+
+.sidebar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.2rem;
+    background-color: rgb(241, 209, 24);
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar a:hover::after {
+    width: 100%;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 50rem) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (max-width: 25rem) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* Final do Menu */
+
+/* Garante que o footer ocupe a largura completa */
+.barra-informacoes {
+    display: flex;
+    flex-wrap: wrap; /* Permite que elementos sejam ajustados em telas menores */
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: black; /* Cor preta */
+    color: white; /* Texto branco */
+    padding: 15px 30px; /* Mais espaço interno */
+    border-radius: 8px;
+    font-family: 'Agdasima', sans-serif;
+    width: 100%; /* Ocupa toda a largura da página */
+    box-sizing: border-box; /* Inclui padding na largura */
+}
+
+.barra-informacoes .info {
+    flex: 1; /* Cada seção ocupa espaço proporcional */
+    margin: 0 20px; /* Espaço entre as seções */
+    min-width: 200px; /* Largura mínima para evitar quebra de texto */
+}
+
+.barra-informacoes h3 {
+    color: rgb(241, 209, 24); /* Cor dourada */
+    margin-bottom: 15px;
+    font-size: 1.8rem; /* Fonte maior para o título */
+}
+
+.barra-informacoes p {
+    margin: 10px 0;
+    line-height: 1.8;
+    font-size: 1.2rem; /* Fonte maior para o texto */
+}
+
+.P-baixo {
+    text-align: center;
+    width: 100%; /* Garante que o texto ocupe toda a largura */
+    margin-top: 20px;
+    font-size: 1rem; /* Tamanho da fonte para o texto de direitos reservados */
+    color: rgb(200, 200, 200); /* Cinza claro */
+}
+
+@media (max-width: 768px) {
+    .barra-informacoes {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .barra-informacoes .info {
+        margin-bottom: 20px;
+    }
+
+    .P-baixo {
+        margin-top:30px;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .barra-informacoes {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+    .barra-informacoes .info {
+        margin-bottom: 20px;
+    }
+
+    .P-baixo {
+        margin-top:30px;
+
+    }
+
+/* Títulos */
+.title-inicio {
+    color: rgb(241, 209, 24);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    max-width: 34.4rem;
+    font-family: 'Agdasima', sans-serif;
+    padding-left: 6.3rem;
+}
+
+.title-2 {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    max-width: 21.2rem;
+    font-family: 'Agdasima', sans-serif;
+    font-size: 1.4pc;
+    padding-left: 6.3rem;
+}
+
+main {
+    text-align: left;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    flex: 1;
+}
+
+/* Parágrafo de rodapé */
+.P-baixo {
+    color: #ffffff;
+    padding-top: 15%;
+    text-align: center;
+}
+
+footer { /* Wrap your existing footer styles within a footer selector */
+    background-color: black; /* Cor preta */
+    color: white; /* Texto branco */
+    padding: 30px 50px;
+    border-radius: 8px;
+    font-family: 'Agdasima', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto; /* Important: Pushes the footer to the bottom */
+}
+
+/* Responsividade */
+
+
+
+/* Botão */
+button {
+    margin-top: 1.9rem;
+    padding: 0.6rem 1.25rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Responsividade para serviços */
+@media (max-width: 48rem) {
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 30rem) {
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PG Sobre */
+.title-sobre {
+    color: rgb(241, 209, 24);
+    font-family: 'Agdasima', sans-serif;
+    font-size: 5pc;
+    text-align: center;
+}
+
+.sobre-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.25rem 0;
+}
+
+.tela-sobre {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+}
+
+.column {
+    flex: 1;
+    padding: 0.6rem;
+}
+
+.text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #474747;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+}
+
+.text-sobre {
+    line-height: 1.6;
+    color: #fff;
+    font-family: 'Agdasima', sans-serif;
+    font-size: 1.4pc;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.75rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #000000;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-field {
+    padding: 10px;
+    border: 1px solid #020202;
+    border-radius: 4px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilos para os botões */
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-submit {
+    background-color: #28a745;
+    color: white;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+/* Estilos dos botões de editar e excluir */
+.btn-edit {
+    background-color: #007bff;
+    color: white;
+    width: 45%;
+}
+
+.btn-edit:hover {
+    background-color: #9eb300;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    width: 45%;
+}
+
+.btn-delete:hover {
+    background-color: #b21f2d;
+}
+
+
+.form-check-input {
+    display: none;
+    }
+.checkbox-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.form-check input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+    transform: scale(1.2); /*Slightly larger checkboxes*/
+}
+
+.form-check-input:checked + label img {
+    transform: scale(1.2);
+    }
+    .form-check label:hover img {
+    transform: scale(1.05);
+    }
+
+.form-check img {
+    max-width: 30%; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+
+.form-check p {
+    font-size: 1rem;
+}
+
+
+/* Button Styles */
+.btn-submit {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+/*fim do agendamento*/
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+/*fim do agendamento*/
